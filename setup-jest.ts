@@ -37,7 +37,7 @@ const mock = () => {
 global.console = {
   ...console,
   // uncomment to ignore a specific log level
-  log: jest.fn(),
+  // log: jest.fn(),
   debug: jest.fn(),
   info: jest.fn(),
   error: jest.fn(),
