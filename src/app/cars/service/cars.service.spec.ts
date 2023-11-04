@@ -11,7 +11,7 @@ describe('CarsService', () => {
   let service: CarsService;
   let httpMock: HttpTestingController;
 
-  let responseCars: ICar[] =  [new Array(10)].map(() => {
+  let responseCars: ICar[] =  Array.from({ length: 10 }, () => {
     return {
       id: faker.number.int(),
       marca: faker.vehicle.manufacturer(),

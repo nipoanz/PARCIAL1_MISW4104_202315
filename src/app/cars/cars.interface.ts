@@ -8,3 +8,9 @@ export interface ICar {
   color: string;
   imagen: string;
 }
+
+
+export interface ITotalCars {
+  nombre: string;
+  cantidad: number;
+}

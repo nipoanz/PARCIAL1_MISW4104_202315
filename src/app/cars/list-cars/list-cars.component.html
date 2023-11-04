@@ -1,8 +1,18 @@
 <div class="container-fluid">
-  <div class="col-6">
+
+  <hr>
+  <div class="row w-100">
+    <img
+      class="list-cars__banner" 
+      src="assets/frame.png"
+      />
+  </div>
+  <hr>
+
+  <div class="col-7">
     <table class="table">
-      <thead>
-        <tr>
+      <thead >
+        <tr class="table-dark">
           <th class="h4">#</th>
           <th class="h4">Marca</th>
           <th class="h4">Linea</th>
@@ -10,9 +20,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let car of cars">
+        <tr class="list-cars__tbody-elements" *ngFor="let car of cars">
           <td>
-            <dd><b>{{ car.id }}</b></dd>
+            <dd>
+              <b>{{ car.id }}</b>
+            </dd>
           </td>
           <td>
             <dd>{{ car.marca }}</dd>
@@ -26,5 +38,15 @@
         </tr>
       </tbody>
     </table>
+    <div class="row" *ngFor="let car of totalCars">
+      <p class="m-0">Total {{ car.nombre }}: {{ car.cantidad}}</p>
+    </div>
   </div>
+  <footer>
+    <div class="row mt-4">
+      <p class="text-center">
+        Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo
+      </p>
+    </div>
+  </footer>
 </div>
